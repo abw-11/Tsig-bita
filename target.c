@@ -22,6 +22,6 @@ int main(){
         count=0;
     }
     if(count==1) printf("successfull search-key element found at position %d index-%d",i+1,i);
-    else printf("unsuccessfull search-key element not found");
+    else printf("unsuccessfull search-key element not found!");
     return 0;
 }
