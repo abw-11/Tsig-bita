@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    
+        body{
+            background-color: #000000;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .bodi{
+            width: 100vw;
+            /* position: relative; */
+                }
+        /* h1{
+          font-family: "charm",serif;
+          
+          
+        } */
+        
+        .content{
+            display: flex;
+            flex-direction: column;
+            /* flex-wrap: wrap; */
+            /* border: 2px solid white; */
+            width: 45%;
+            height: 80vh;
+            position: absolute;
+            height: 80vh;
+            top:30px;
+            margin-left: 10px;
+        }
+        .about{
+            display: flex;
+            /* border: 1px solid red; */
+            height: 18vh;
+            /* flex-direction: column; */
+            align-items: center;
+            justify-content:flex-start;
+            margin-left: 2px;
+            margin-right: 2px;
+            /* padding-top: 30px; */
+        }
+        .abt{
+            display: flex;
+            flex-wrap:wrap;
+            min-height:fit-content;
+            /* border: 1px solid rgb(17, 148, 129); */
+            height: 30vh;
+            margin-top: 20px;
+            margin-left: 2px;
+            margin-right: 2px;
+            color: rgb(0, 0, 0);
+            font-size: 25px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+            /* overflow: hidden; */
+            background-color: #67beded8;
+        border-radius: 15px;         
+        opacity: 1;
+        padding-left: 12px; 
+        padding-top: 0; 
+        }
+        .paradot{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .paradot{
+            display: inline-block;
+            opacity: 0;
+            animation: blink-dot 1s infinite;
+        }
+        @keyframes blink-dot {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+
+        }
+        .skill-projects{
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 15px 50px;
+            height: 30vh;
+            margin-top: 20px;
+            margin-left: 2px;
+            margin-right: 2px;
+            display: flex;
+            justify-content: center;
+            background-color:rgba(0, 0, 0,0.8);
+            min-height: fit-content;
+
+        }
+        .pro-head{
+            display: flex;
+            justify-content: flex-start;
+            /* border: 1px solid wheat; */
+            /* width:45vw; */
+        }
+        .skill-projects h3{
+            font-style: bold;
+            font-size: 30px;
+            padding-top: 0;
+            text-decoration: underline;
+            /* margin-bottom: 0; */
+            margin-top: 0;
+        }
+
+        .project-img-container{
+            display: flex;
+            height: 10vh;
+            width:30vw;
+            /* flex-direction: row; */
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+
+            /* border: 1px solid aquamarine; */
+        }
+    
+        .project-img{
+            height: 50px;
+            width: 50px;
+            
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 5px;
+        }
+        .nav-bar{
+            height: 50px;
+            width: 50px;
+            background-color: #ffffff;
+        }
+        .project-info{
+            /* border: 1px solid yellow; */
+            height: 35px;
+            width: 35vw;
+            position: absolute;
+            bottom:5px;
+            display: flex;
+            /* flex-wrap: wrap; */
+            justify-content:space-evenly;
+            align-items: center;
+
+        }
+        .pr-info{
+            color: rgb(255, 255, 255);
+            /* font-size: ; */
+
+        }
+
+
+        .profile{
+            /* border: 2px solid rgb(185, 194, 20); */ /**/
+             width: 45%;
+            height: 80vh;
+            position: absolute;
+            top:30px;
+            right: 10px;
+            /* margin-left: 10px; */
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .prof{
+            display: flex;
+            justify-content: center;
+            /* border: 1px solid yellow; */ /**/
+            height:30vh ;
+            width:45vw;
+            position: absolute;
+            top: 0;
+        }
+        .img-container{
+            border: 2px solid white;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            margin-top: 20px;
+            position: relative;
+
+                }
+        .img{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+
+        }
+        .dot{
+            width: 5px;
+    height: 5px;
+    border: 5px solid black;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 50%;  /* Position the dot at the center of the container */
+    left: 50%;
+    transform-origin: 0 0;  /* Set the transform origin to the center of the circle */
+    margin-top: -5px; /* Adjust to center the dot vertically */
+    margin-left: -5px; /* Adjust to center the dot horizontally */
+    animation: rotateDot 5s linear infinite;
+        }
+
+        @keyframes rotateDot {
+            0% {
+        transform: rotate(0deg) translateX(100px) rotate(0deg); /* Move the dot to the circumference */
+    }
+    100% {
+        transform: rotate(360deg) translateX(100px) rotate(-360deg); /* Complete the rotation */
+    }
+}
+.education{
+    /* border: 1px solid beige; */ /**/
+    /* position: absolute; */
+    height: 20vh;
+    width: 45vw;    
+    margin-top: 5vh;
+}
+.education h3{
+    color: #fff;
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.education p{
+    color: #fff;
+    font-size: 20px;    
+}
+.education ul{
+    margin-top: 0;
+    display: inline-block;
+}
+.education a{
+    text-decoration: none;
+    color:greenyellow;
+}
+.education li::marker{
+    color: white;
+}
+.education li{
+    color: #fff;
+    font-size: 25px;
+    margin-top: 0;
+}
+.skill{
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50px 15px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    position: absolute;
+    height: 28vh;
+    width: 45vw;    
+    /* margin-top: 4vh; */
+    bottom: 0;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+}
+.skill-logo{
+    /* border: 1px solid white; */
+    height: 20vh;
+    width: 45vw;
+}
+.skillclass{
+    color: white;
+    font-size:30px;
+    padding-top: 0;
+    /* background-color: #fff; */
+    margin-bottom: 0;
+}
+.skill-logo-container{
+    /* border: 1px solid white;  */
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    
+}
+.skill-size{
+    height: 60px;
+    width: 60px;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.htmllogo{
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
+    border-radius:20%;
+}
+.csslogo{
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
+    border-radius:20%;
+}
+.clogo{
+    height: 60px;
+    width: 50px;
+    background-color: #fff;
+    border-radius:20%;
+}
+.counting{
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    display: inline-block;
+    white-space:nowrap;
+    overflow: hidden;
+    width: fit-content;
+}
+.dots{
+    display:inline-block;
+    opacity: 0;
+    animation: typewriter-dots 1.5s 
+      infinite ;
+}
+@keyframes typewriter-dots{
+    0%,20%,100%{
+        opacity: 0;
+    }
+    10%,30%{
+        opacity: 1;
+    }
+    /* 66%{
+        opacity: 0;
+    } */
+}
+.dots:nth-child(1){
+animation-delay: 0s;
+}
+.dots:nth-child(2){
+animation-delay: 0.5s;
+}
+.dots:nth-child(3){
+animation-delay: 1s;
+}
+
+
+       
+        .ping{
+            /* border: 2px solid grey;   */
+            width: 60vw;
+            height: 14vh;
+            bottom:0;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%);
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            
+        }
+        .contact{
+            width:15vw;
+            /* border: 1px solid white; */ /**/
+            height: 12vh;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        .cont-span{
+            border:1px solid white;
+            height: 6vh;
+            width: 13vw;
+            position: absolute;
+            background-color:#000000 ;
+            border-radius:20px;
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo{
+            width:44vw;
+            /* border: 1px solid white; */ /**/
+            height: 12vh;
+            margin: 10px;
+            display: flex;
+            justify-content:space-around ;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .log{
+           border: 1px solid white;
+           height:5vh;
+           width:5vw; 
+           /* margin-left: 1vh; */
+           background-color: #fff;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           border-radius: 10px;
+        }
+        .twitt{
+            padding-top: 3px;
+        }
+        .insta{
+            padding-top: 4px;
+        }
+        .insta,.twitt{
+            height: 5vh;
+            width: 5vh;
+        }
+        .whats,.linked{
+            height: 4vh;
+            width: 4vh;
+        }
+    </style>
+</head>
+<body><div class="bodi">
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#F78DA7"></stop><stop offset="95%" stop-color="#8ED1FC"></stop></linearGradient></defs><path d="M 0,600 L 0,150 C 23.771515169955173,185.91701470567037 47.543030339910345,221.83402941134074 69,219 C 90.45696966008965,216.16597058865926 109.59939381031381,174.58089706030736 134,140 C 158.4006061896862,105.41910293969264 188.05939441883433,77.84238234742979 217,88 C 245.94060558116567,98.15761765257021 274.16302851434875,146.04957354997345 296,145 C 317.83697148565125,143.95042645002655 333.2884915237705,93.95932345267649 359,108 C 384.7115084762295,122.04067654732351 420.68300539056924,200.11313263932058 444,205 C 467.31699460943076,209.88686736067942 477.97948691395226,141.58814599004123 494,128 C 510.02051308604774,114.41185400995877 531.3990469536218,155.53428340051448 563,179 C 594.6009530463782,202.46571659948552 636.4243252715605,208.27472040790093 661,213 C 685.5756747284395,217.72527959209907 692.9036519601364,221.3668349678818 711,200 C 729.0963480398636,178.6331650321182 757.9610668878939,132.25793972057193 790,106 C 822.0389331121061,79.74206027942807 857.2520804882879,73.60140614983051 877,76 C 896.7479195117121,78.39859385016949 901.0306111589549,89.336435680106 922,106 C 942.9693888410451,122.663564319894 980.6254748758929,145.05285112974548 1012,148 C 1043.374525124107,150.94714887025452 1068.4674893374736,134.452159800912 1088,118 C 1107.5325106625264,101.547840199088 1121.504567774213,85.13850966660647 1140,111 C 1158.495432225787,136.86149033339353 1181.5142395656749,204.99380153266216 1211,218 C 1240.4857604343251,231.00619846733784 1276.4384739630875,188.8862842027448 1301,165 C 1325.5615260369125,141.1137157972552 1338.731864581975,135.46106165635862 1360,136 C 1381.268135418025,136.53893834364138 1410.6340677090125,143.26946917182067 1440,150 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 300)"></path><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#F78DA7"></stop><stop offset="95%" stop-color="#8ED1FC"></stop></linearGradient></defs><path d="M 0,600 L 0,350 C 22.647077863786976,312.78699075973054 45.29415572757395,275.5739815194611 70,280 C 94.70584427242605,284.4260184805389 121.47045495349118,330.4910646818862 150,354 C 178.52954504650882,377.5089353181138 208.82402445846125,378.46175975299417 228,381 C 247.17597554153875,383.53824024700583 255.23344721266386,387.66189630613707 279,381 C 302.76655278733614,374.33810369386293 342.2421866908835,356.89065502245757 370,361 C 397.7578133091165,365.10934497754243 413.7978060238022,390.77548360403296 432,386 C 450.2021939761978,381.22451639596704 470.56658921390795,346.0074105614105 492,321 C 513.433410786092,295.9925894385895 535.9358371205658,281.1948741503249 562,315 C 588.0641628794342,348.8051258496751 617.6900623038285,431.21309283728993 649,417 C 680.3099376961715,402.78690716271007 713.3039136641202,291.9527545005154 733,278 C 752.6960863358798,264.0472454994846 759.094283039691,346.9758891606482 782,364 C 804.905716960309,381.0241108393518 844.3189541771159,332.1436888568918 875,301 C 905.6810458228841,269.8563111431082 927.6299002518457,256.44935541178467 947,281 C 966.3700997481543,305.55064458821533 983.161444815501,368.0588894959696 1002,381 C 1020.838555184499,393.9411105040304 1041.72432048615,357.3150866043368 1071,343 C 1100.27567951385,328.6849133956632 1137.941273239899,336.6807640866832 1161,337 C 1184.058726760101,337.3192359133168 1192.510586554254,329.9618570489302 1212,313 C 1231.489413445746,296.0381429510698 1262.0163805430852,269.47180771759565 1292,284 C 1321.9836194569148,298.52819228240435 1351.423891273404,354.15091208068696 1376,372 C 1400.576108726596,389.84908791931304 1420.288054363298,369.9245439596565 1440,350 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 300)"></path></svg>
+    <div class="content">
+        <div class="about">
+            <h1><b>ABDUL WASE</b>
+            <br><i>here,</i></h1>
+        </div>
+        <div class="abt">
+            <p> A passionate and driven beginner frontend developer. With a eagerness to learn and grow, constantly exploring new technologies and trends to enhance my skills<span class="paradot">.</span></p>
+        </div>
+        <div class="skill-projects">
+            <div>
+                <div class="pro-head" ><h3 style="color: aliceblue;">Projects</h3></div>
+            <div class="project-img-container">
+                <div class="project-img">
+                    <img class="nav-bar" src="nav-bar.webp" alt="">
+            </div>
+            <div class="project-img">
+                <img class="nav-bar" src="website1.webp" alt="">
+            </div>
+        </div>
+            </div>
+            <div class="project-info">
+             <h4 class="pr-info">Basic navigation bar</h4>
+             <h4 class="pr-info"> Course assignment webpage</h4>
+            </div>
+        </div>
+
+    </div>
+    <div class="profile">
+       <div class="prof"> <div class="img-container">
+        <img class="img" src="profile.png" alt="">
+        <div class="dot">
+        </div></div>
+        </div>
+        <div class="education" >
+            <div>
+                <h3>Education:</h3>
+                <ul><li>An undergraduate at <a href="https://mjcollege.ac.in/" target="_blank">MJCET</a> in the field of Information Technology.</ul>li></ul>
+            </div>
+        </div>
+        <div class="skill" >
+            <div class="skill-logo">
+                <h3 class="skillclass"><i>Skills:</i></h3>
+                <div class="skill-logo-container">
+                    <div class="html skill-size">
+                        <img src="htmllogo.png" class="htmllogo" alt="">
+                    </div>
+                <div class="css skill-size">
+                    <img class="csslogo" src="css3logo.svg" alt="">
+                </div>
+                <div class="c skill-size" >
+                    <img class="clogo" src="clogo.png" alt="">
+                </div>
+                </div>
+            </div>
+            <div class="counting">
+                still counting <span class="dots">.</span>
+                <span class="dots">.</span>
+                <span class="dots">.</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="ping">
+        <div class="contact">
+            <span class="cont-span"><strong>Ping <br> Me >>
+
+            </strong></span>
+        </div>
+        <div class="logo">
+           <div class="log">
+            <a href="https://x.com/abdulwasey_?t=YdU_6_CSFgAM6eshzWg0nw&s=08" target="_blank"><img class="twitt" src="twitter1.svg" alt="twitter"></a>
+           </div>
+           <div class="log">
+            <a href="https://www.instagram.com/a_b_w_11/" target="_blank">
+                <img class="insta" src="logo-instagram.svg" alt="instagram">
+            </a>
+           </div>
+           <div class="log">
+            <a href="https://wa.me/919075971977" target="_blank">
+                <img src="whatsapp1.png" class="whats" alt="whatsapp">
+            </a>
+           </div>
+           <div class="log">
+            <a href="https://www.linkedin.com/in/abdul-wasey-107146344/" target="_blank">
+                <img class="linked" src="linkedin.svg" alt="linkedin" >
+            </a>
+           </div>
+
+        </div>
+
+
+
+    </div>
+    </div>
+     
+     
+     
+     
+    
+</body>
+</html>
